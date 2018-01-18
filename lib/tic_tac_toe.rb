@@ -37,14 +37,6 @@ def turn(board)
   end
 end
 
-def play(board)
-counter = 0
-while counter < 9
-turn(board)
-  counter += 1
-  end
-end
-
 WIN_COMBINATIONS = [
   [0, 1, 2],
   [3, 4, 5],
@@ -103,17 +95,6 @@ elsif !won?(board)
   end
 end
 
-def play(board)
-  while !over?(board)
-    turn(board)
-  end
-  if draw?(board)
-       prints "Cats Game!"
-  else won?(board)
-     puts "Congratulations #{winner(board)}!"
-   end
-end
-
 def turn_count(board)
   counter = 0
   board.each do |turns|
@@ -134,4 +115,16 @@ def current_player(board)
   else
     return "O"
 end
+end
+
+
+def play(board)
+  while !over?(board)
+    turn(board)
+  end
+  if draw?(board)
+       puts "Cats Game!"
+  else won?(board)
+     puts "Congratulations #{winner(board)}!"
+   end
 end
