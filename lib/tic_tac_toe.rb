@@ -104,7 +104,7 @@ elsif !won?(board)
 end
 
 def play(board)
-  while !over?(board)
+  while !winner(board)
     turn(board)
   end
   if draw?(board)
