@@ -120,6 +120,7 @@ end
 
 def play(board)
   while !over?(board)
+    current_player(board)
     turn(board)
   end
   if draw?(board) == true
