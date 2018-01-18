@@ -12,6 +12,8 @@ end
 
 def move (board, index, players_character = "X")
   board[index] = players_character
+  turn_count(board)
+  display_board(board)
 end
 
 def position_taken?(board, index)
