@@ -122,9 +122,17 @@ def play(board)
   while !over?(board)
     turn(board)
   end
-  if draw?(board)
-       puts "Cats Game!"
-  else won?(board)
+  if won?(board)
      puts "Congratulations #{winner(board)}!"
+  else draw?(board)
+      puts "Cats Game!"
    end
+end
+
+def play(board)
+counter = 0
+while counter < 9
+turn(board)
+  counter += 1
+  end
 end
